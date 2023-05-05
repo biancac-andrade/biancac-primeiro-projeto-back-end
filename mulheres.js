@@ -123,9 +123,9 @@ async function corrigeMulher(request, response) {
       mulherEncontrada.minibio = request.body.minibio;
     }
 
-     if (request.body.citacao) {
-       mulherEncontrada.citacao = request.body.citacao;
-     }
+    if (request.body.citacao) {
+      mulherEncontrada.citacao = request.body.citacao;
+    }
     
   const mulherAtualizadaNoBancoDeDados = await mulherEncontrada.save()
   response.json(mulherAtualizadaNoBancoDeDados);
